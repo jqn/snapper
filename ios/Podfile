@@ -12,6 +12,11 @@ target 'Snapper' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+    'TextDetector',
+    'BarcodeDetectorMLKit'
+  ]
+
   target 'SnapperTests' do
     inherit! :complete
     # Pods for testing
